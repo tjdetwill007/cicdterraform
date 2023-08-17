@@ -31,7 +31,7 @@ resource "aws_instance" "myserver" {
       user        = "ec2-user"
       host = aws_instance.myserver.public_ip
       # private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
-      private_key = "${path.root}/myserver.pem"
+      private_key = "${file(path.root/myserver.pem)}"
     }
   }
 
@@ -47,7 +47,7 @@ resource "aws_instance" "myserver" {
       user        = "ec2-user"
       host = aws_instance.myserver.public_ip
       # private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
-      private_key = "${path.root}/myserver.pem"
+      private_key = "${file(path.root/myserver.pem)}"
     }
 
 
