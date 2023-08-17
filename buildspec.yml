@@ -25,7 +25,7 @@ phases:
       - terraform -chdir="./terraform/test_env/" apply -auto-approve
   post_build:
     commands:
-      - |
-        if [ $? == 1 ]; then
-          terraform -chdir="./terraform/test_env/" destroy -auto-approve;
-        fi
+      - |-
+          if [ $? == 1 ]; then
+            terraform -chdir="./terraform/test_env/" destroy -auto-approve
+          fi
