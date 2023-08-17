@@ -9,7 +9,7 @@ phases:
       - chmod +x /usr/bin/terraform
     finally:
       - terraform --version
-      - terrafom --help
+      - terraform --help
   pre_build:
     commands:
       - terraform -chdir="./terraform/test_env/" init
