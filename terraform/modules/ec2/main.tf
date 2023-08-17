@@ -30,7 +30,8 @@ resource "aws_instance" "myserver" {
       type        = "ssh"
       user        = "ec2-user"
       host = aws_instance.myserver.public_ip
-      private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
+      # private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
+      private_key = "${file("./myserver.pem")}"
     }
   }
 
@@ -45,8 +46,11 @@ resource "aws_instance" "myserver" {
       type        = "ssh"
       user        = "ec2-user"
       host = aws_instance.myserver.public_ip
-      private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
+      # private_key = "${file("C:\\Users\\Deepak Kumar\\Downloads\\myserver.pem")}"
+      private_key = "${file("./myserver.pem")}"
     }
+
+
   }
 
 }
