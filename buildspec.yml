@@ -13,6 +13,9 @@ phases:
     finally:
       - terraform --version
       - terraform --help
+      - echo *******************************************WAIT***WAIT***WAIT***********************************
+      - pwd
+      - ll -a
   pre_build:
     commands:
       - terraform -chdir="./terraform/test_env/" init
@@ -22,4 +25,7 @@ phases:
       - terraform -chdir="./terraform/test_env/" apply -auto-approve
   post_build:
     commands:
-      - echo Entered the post_build phase...
+      - |
+        if [ $? == 1 ]; then
+          terraform -chdir="./terraform/test_env/" apply -auto-approve;
+        fi
