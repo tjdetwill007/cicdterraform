@@ -1,0 +1,6 @@
+app.zip
+terraform/test_env/.terraform
+terraform/test_env/.terraform.lock.hcl
+terraform/test_env/terraform.tfstate
+terraform/test_env/terraform.tfstate.backup
+master
