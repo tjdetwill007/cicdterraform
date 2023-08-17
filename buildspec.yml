@@ -15,7 +15,7 @@ phases:
       - terraform --help
       - echo *******************************************WAIT***WAIT***WAIT***********************************
       - pwd
-      - ll -a
+      - ls -a
   pre_build:
     commands:
       - terraform -chdir="./terraform/test_env/" init
